@@ -2,6 +2,7 @@
 cp /etc/rc.local /home/pi/Backups/$(date +%Y%m%d).rc.local
 crontab -l > /home/pi/Backups/$(date +%Y%m%d).crontab
 dpkg --get-selections > /home/pi/Backups/$(date +%Y%m%d).Package.list
+mongodump --out /home/pi/Backups/mongodump
 
 REPOSITORY=/home/pi/dataPod1/PiBackups
 
